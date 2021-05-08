@@ -1,0 +1,25 @@
+RA = int(input("Player A's rating?:"))
+RB = int(input("Player B's rating?:"))
+
+ExpScoreA = (1 / (1 + (10 ** ((RB - RA) / 400))))
+ExpScoreB = (1 / (1 + (10 ** ((RA-RB) / 400))))
+
+print("Probability of winning:",ExpScoreA,"/",ExpScoreB)
+
+ques = input("Who won (A or B)?:")
+
+if ques.lower() == "a":
+    SA = 1
+    SB = 0
+else:
+    SB = 1
+    SA = 0
+K = 100
+
+
+RatA = RA + K*(SA - ExpScoreA)
+RatB = RB + K*(SB - ExpScoreB)
+
+print("")
+print("Player A's rating is",RatA)
+print("Player B's rating is",RatB)
