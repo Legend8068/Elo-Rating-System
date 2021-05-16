@@ -14,8 +14,8 @@ if ques.lower() == "a":
 else:
     SB = 1
     SA = 0
-K = 100
 
+K = 100
 
 RatA = RA + K*(SA - ExpScoreA)
 RatB = RB + K*(SB - ExpScoreB)
