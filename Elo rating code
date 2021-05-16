@@ -23,3 +23,4 @@ RatB = RB + K*(SB - ExpScoreB)
 print("")
 print("Player A's rating is",RatA)
 print("Player B's rating is",RatB)
+g  
